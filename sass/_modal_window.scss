@@ -1,0 +1,522 @@
+.modal{
+	min-width: 320px;
+	z-index: 99999;
+	.modal-dialog{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 1em;
+		background: url("../img/modal/bg.jpg") #7a4190 no-repeat;
+		background-position: top right;
+		.modal-content{
+			border-radius: 0;
+			.modal-header{
+				border:none;
+				.close{
+					opacity: 1;
+					span{
+						display: block;
+						width: 23px;
+						height: 23px;
+						background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXAQMAAADa5EbjAAAABlBMVEXYLIvYLIulooE8AAAAAnRSTlMK9UGrIyEAAABKSURBVAjXY1Bg4GAoYJBh+MFgx1ADhHZAljzjBwb+5gcM7McPMDC/b2Bg/M/AwPAPiGsgNIgPEgfJg9SB1IP0gfSDzAGZx8DAAQA8SheNym3o6QAAAABJRU5ErkJggg==');
+						transition: background-image 0.8s ease-in-out;
+					}
+				}
+				.close:hover span{
+					display: block;
+					width: 23px;
+					height: 23px;
+					background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXAQMAAADa5EbjAAAABlBMVEV6QZB6QZCXBgezAAAAAnRSTlMK9UGrIyEAAABKSURBVAjXY1Bg4GAoYJBh+MFgx1ADhHZAljzjBwb+5gcM7McPMDC/b2Bg/M/AwPAPiGsgNIgPEgfJg9SB1IP0gfSDzAGZx8DAAQA8SheNym3o6QAAAABJRU5ErkJggg==');
+				}
+				.modal-title{
+					font-size: (32/$html_fsize)+rem;
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+
+
+			.modal-body{
+				padding: 0 4%;
+				.form-control{
+					font-family: $font-family-text;
+					font-size: (18/$html_fsize)+rem;
+					padding: 1.2em 1em 0.9em 1em;
+					height: auto;
+					color: #000;
+					border-color: $purple;
+				}
+				.form-control:focus{
+					-webkit-box-shadow: 0px 0px 11px 0px rgba(124,63,153,0.4);
+					-moz-box-shadow: 0px 0px 11px 0px rgba(124,63,153,0.4);
+					box-shadow: 0px 0px 11px 0px rgba(124,63,153,0.4);
+				}
+			}
+
+
+			.modal-footer{
+				padding-right: 4%;
+				padding-left: 4%;
+				border:none;
+				.form_info{
+					font-size: 1.4em;
+				}
+				.upload_info{
+					font-size: (22/$html_fsize)+rem;
+					text-align: left;
+					color: $pink;
+				}
+				.page_btn{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+#myModalCalck{
+	.modal-dialog{
+		max-width: 600px;
+		margin: 2% auto;
+		.modal-content{
+			.modal-body{
+			}
+			.modal-footer{
+				#bnts{
+					display: flex;
+					.left{display: none}
+					.page_btn{
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+#myModalSend{
+	.modal-dialog{
+		max-width: 500px;
+		margin: 2% auto;
+	}
+}
+#myModalCalck2{
+	.modal-dialog{
+		max-width: 800px;
+		margin: 2% auto;
+		.modal-content{
+			.modal-body{
+				p{
+					font-size: (20/$html_fsize)+rem;
+				}
+				.item{
+					.title{
+						color: $purple;
+					}
+					.text{
+
+					}
+				}
+				#cost_info{
+					.info{
+						margin-top: -0.8em;
+						font-size: (14/$html_fsize)+rem;
+					}
+
+					#cheaper{
+						margin-top: -0.8em;
+						margin-bottom: 0.8em;
+						#cheaper_btn{
+							display: inline-block;
+							color: $green;
+							cursor: pointer;
+							transition: color $transition-time-move;
+						}
+						#cheaper_block2{
+							label{
+								display: block;
+								margin: 0.2em 0;
+								cursor: pointer;
+								input{
+									cursor: pointer;
+									margin-right: 1em;
+								}
+							}
+						}
+					}
+					#additionally2{
+						font-size: (18/$html_fsize)+rem;
+						.title{
+							font-family: $font-family;
+							font-weight: normal;
+							cursor: pointer;
+							transition: opacity $transition-time-move;
+						}
+					}
+					#additionally_btn:hover{text-decoration: none;}
+					.title:hover{opacity: 0.6;}
+				}
+				#short_info{
+				}
+
+				#info_time{
+					.warning{
+						margin-top: 0.8em;
+						color: red;
+					}
+					p{
+						font-size: (16/$html_fsize)+rem;
+						margin: 0;
+					}
+				}
+			}
+			.modal-footer{
+				.page_btn{
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 991px){
+	#myModalCalck2{
+		.modal-dialog{
+			max-width: 450px;
+			.modal-title{
+				margin-top: -0.4em;
+				font-size: (26/$html_fsize)+rem;
+			}
+			.modal-content{
+				.modal-body{
+					p{
+						font-size: (18/$html_fsize)+rem;
+					}
+				}
+			}
+			.modal-footer{
+				.page_btn:last-child{
+					margin-top: 1em;
+				}
+			}
+		}
+	}
+}
+#myModalOrder{
+	.modal-dialog{
+		.modal-content{
+			.modal-body{
+				#file_upload{
+					position: relative;
+					border: 4px dashed $purple;
+					input{
+						position: absolute;
+						margin: 0;
+						padding: 0;
+						width: 100%;
+						height: 100%;
+						outline: none;
+						opacity: 0;
+					}
+					#file_info{
+						display: flex;
+						padding: 2em;
+						justify-content: space-around;
+						align-items: center;
+						#foto{
+							max-width: 40%;
+							max-height: 250px;
+						}
+						#files{
+							position: relative;
+							display: none;
+							align-items: center;
+							flex-wrap: wrap;
+							justify-content: center;
+							max-width: 40%;
+							z-index: 1;
+							.img{
+								width: 70px;
+								height: auto;
+								margin: 5px;
+								.imageThumb {
+									width: 100%;
+									height: auto;
+									cursor: pointer;
+								}
+								.remove {
+									display: block;
+									background: $purple;
+									color: white;
+									text-align: center;
+									cursor: pointer;
+								}
+								.remove:hover {
+									background: $pink;
+								}
+							}
+						}
+						#description_form_file{
+							width: 40%;
+							h4{
+								font-size: (26/$html_fsize)+rem;
+							}
+							p{
+								margin-bottom: 0;
+								font-family: $font-family-text;
+								font-size: (18/$html_fsize)+rem;
+							}
+							button{
+								margin: 0;
+								padding: 0;
+								border: none;
+								background-color: $background;
+								font-family: $font-family-text-bold;
+								font-size: (22/$html_fsize)+rem;
+								color: $purple;
+								text-decoration: underline;
+								cursor: pointer;
+							}
+							#count_foto{display: none}
+						}
+					}
+					@media screen and(max-width: 700px){
+						#file_info{
+							flex-direction: column;
+							#foto{
+								display: none;
+							}
+							#description_form_file{
+								width: 100%;
+								p.text{display: none}
+							}
+						}
+					}
+				}
+
+				#form_info{
+					margin: 2em 0;
+					p{
+						margin: 0;
+						font-size: (18/$html_fsize)+rem;
+						font-family: $font-family-text;
+					}
+					// p:first-child{
+						// 	font-family: $font-family-text-bold;
+						// 	color: $purple;
+						// }
+						#spam{margin-top: 2em}
+						a{
+							cursor: pointer;
+							text-decoration: none;
+						}
+						.title{
+							font-family: $font-family-text-bold;
+							color: $purple;
+						}
+						.where_send{
+							.radio{
+								.hidden_input{
+									display: none;
+								}
+							}
+						}
+					}
+
+					#colors{
+						font-size: (18/$html_fsize)+rem;
+						.title{
+							font-family: $font-family;
+							font-weight: normal;
+							cursor: pointer;
+							transition: opacity $transition-time-move;
+						}
+					}
+				}
+
+
+				.modal-footer{
+					.form_info{
+						margin: 0;
+						font-size: (18/$html_fsize)+rem;
+						// font-family: $font-family-text;
+						color: $pink;
+					}
+					.page_btn{
+					}
+				}
+			}
+		}
+	}
+
+
+	@media screen and(max-width: 991px){
+		#myModal{
+			.modal-dialog{
+				.modal-title{
+					margin-top: -0.4em;
+					font-size: (26/$html_fsize)+rem;
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+	#myModalColors{
+		.modal-dialog{
+			max-width: 800px;
+			margin: 2% auto;
+			.modal-content{
+				.modal-body{
+					#colors{
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-between;
+						.color_block{
+							display: block;
+							margin-top: 1em;
+							width: 49%;
+							padding: 0.5em;
+							border: none;
+							border-radius: 4px;
+							background-color: rgba(141, 73, 172, 0.6);
+							cursor: pointer;
+							transition: background-color $transition-time-move;
+							.wrapper{
+								.img{
+									img{width: 100%}
+								}
+							}
+						}
+						.color_block:hover{
+							background-color: rgba(246, 71, 167, 0.5);
+						}
+						.color_block.active{
+							background-color: $green;
+						}
+					}
+					.info{
+						margin-top: 2em;
+						font-size: (18/$html_fsize)+rem;
+					}
+
+					#palette{
+						display: flex;
+						justify-content: space-around;
+						.palette_block{
+							display: block;
+							margin: 0 1%;
+							padding: 5px;
+							width: 15%;
+							border:none;
+							background-color: rgba(246, 71, 167, 0.5);
+							border-radius: 4px;	
+							.wrapper{
+								.color{
+									height: 2em;
+								}
+							}
+						}
+						.palette_block:hover{
+							background-color: rgba(141, 73, 172, 0.6);
+						}
+						.palette_block.active{
+							background-color: $green;
+						}
+					}
+
+
+					#your_color{
+						overflow: hidden;
+						#your_colors{
+							.color_block{
+								margin: 0.5em 0;
+								display: flex;
+								justify-content: flex-start;
+								align-items: center;
+								font-size: (18/$html_fsize)+rem;
+								p{
+									margin: 0;
+									width: 7em;
+								}
+								.color{
+									margin: 0 1em;
+									height: 1em;
+									width: 4em;
+									border: 2px solid rgba(246, 71, 167, 0.5);
+									border-radius: 3px;
+								}
+								button{
+									margin: 0;
+									padding: 0;
+									border: none;
+									background: none;
+									color: $pink;
+									font-weight: bold;
+								}
+							}
+						}
+						#colorSelector{
+							// height: 0;
+							text-align: center;
+							// overflow: hidden;
+							// transition: height $transition-time;
+							#select_color{
+								display: flex;
+								#your_color_save{
+									flex-shrink:0;
+								}
+								#color{
+									display: flex;
+									align-items: center;
+									margin-left: 1em;
+									padding-left: 1em;
+									width: 100%;
+									flex-shrink:50;
+									border: 4px solid rgba(246, 71, 167, 0.5);
+									border-radius: 4px;
+								}
+							}
+						}
+					}
+				}
+
+
+				.modal-footer{
+					.form_info{
+						font-size: (18/$html_fsize)+rem;
+					}
+					#bnts{
+						display: flex;
+						.left{display: none}
+						.page_btn{
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	@media screen and(max-width: 560px){
+		#myModalColors{
+			.modal-dialog{
+				.modal-content{
+					.modal-body{
+						#colors{
+							.color_block{
+								width: 100%;
+							}
+						}
+					}
+					.modal-footer{
+					}
+				}
+			}
+		}
+
+	}

@@ -1,0 +1,46 @@
+#discount_page{
+	padding-top: 100px;
+	padding-bottom: 50px;
+	.text{
+		font-size: 24px;
+		p{
+
+		}
+		.line{
+			margin-top: 1em;
+			position: relative;
+			>div, >p{display: inline-block;}
+			>span{
+				position: relative;
+				// top: -8px;
+			}
+			.discount{
+				position: relative;
+				// top: -5px;
+				font-size: 35px;
+			}
+			.soc_btn{
+				position: relative;
+				top: 10px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	#discount_page{
+		padding-top: 0;
+		.text{
+		font-size: 20px;
+		p{
+
+		}
+		.line{
+			.discount{
+				font-size: 20px;
+			}
+		}
+	}
+	}
+}

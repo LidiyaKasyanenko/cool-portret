@@ -1,0 +1,123 @@
+#page_footer{
+	padding: 3em 0;
+	background: url("../img/footer/bg-footer.png") #131313 no-repeat;
+	background-position: top right;
+	color: #fff;
+	.footer_blocks{
+		display: flex;
+		justify-content: space-around;
+		.footer_block{
+			width: 24%;
+		}
+
+		#name_page_footer{
+			#site_name{
+				margin-top: 0;
+				font-size: (37/$html_fsize)+rem;
+				b{
+					font-family: $font-family-text-bold;
+					text-transform: lowercase;
+				}
+			}
+			#site_title{
+				margin-top: 0;
+				font-size: (41/$html-fsize)+rem;
+			}
+			#site_tagline{
+				text-transform: uppercase;
+				margin-top: -0.1em;
+				font-family: $font-family-logo;
+				font-weight: bold;
+				font-size: (13/$html-fsize)+rem;
+			}
+		}
+		#soc_footer{
+			p{
+				font-size: (26/$html-fsize)+rem;
+				margin-bottom: 0.6em;
+			}
+			.soc_btn{
+				justify-content: flex-start;
+			}
+		}
+		#nav_footer{
+			a{
+				display: block;
+				font-size: (30/$html_fsize)+rem;
+				text-decoration: none;
+				color: #fff;
+				transition: ease color $transition-time-move;
+			}
+			a:hover{
+				color: $purple;
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 1760px){
+	#page_footer{
+		background: url("../img/footer/bg-footer1760.png") #131313 no-repeat;
+		background-position: top right;
+	}
+}
+
+@media screen and(max-width: 1440px){
+	#page_footer{
+		background: url("../img/footer/bg-footer1440.png") #131313 no-repeat;
+		background-position: top right;
+	}
+}
+
+
+@media screen and(max-width: 1199px){
+	#page_footer{
+		background: #131313;
+		.footer_blocks{
+			flex-wrap: wrap;
+			.footer_block{
+				width: 40%;
+			}
+			#name_page_footer, #soc_footer{
+				margin-bottom: 2em;
+			}
+			.info_messange{
+				text-align: left;
+			}
+		}
+	}
+}
+
+
+@media screen and(max-width: 680px){
+	#page_footer{
+		.footer_blocks{
+			.footer_block{
+				width: 49%;
+			}
+		}
+	}
+}
+
+
+@media screen and(max-width: 580px){
+	#page_footer{
+		.footer_blocks{
+			justify-content: center;
+			.footer_block{
+				width: 80%;
+				margin-bottom: 2em;
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 450px){
+	#page_footer{
+		.footer_blocks{
+			.footer_block{
+				width: 90%;
+			}
+		}
+	}
+}

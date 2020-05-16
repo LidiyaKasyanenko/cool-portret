@@ -1,0 +1,1 @@
+<option value="size%index%" data-max="%max_people%">%size% см</option>

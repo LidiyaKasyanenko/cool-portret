@@ -1,0 +1,132 @@
+$width: 1500px;
+$height: 870px;
+#page_composition{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background: $purple-dark;
+	color: #fff;
+
+	.block_title{
+		// display: none;
+		// font-size: (50/$html_fsize)+rem;
+	}
+
+	.bg-wrapp {
+		position: relative;
+	}
+
+	#set_left, #set_right{
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: $height;
+	}
+
+	#set_left{
+		left:0;
+		background: url("../img/set/bg-left.jpg");
+		background-size: contain;
+	}
+
+	#set_right{
+		right:0;
+		background: url("../img/set/bg-right.jpg");
+		background-size: contain;
+	}
+
+	#set_center{
+		position: relative;
+		z-index: 2;
+		margin: 0 auto;
+		width: $width;
+		height: $height;
+		background: url("../img/set/set.jpg") no-repeat center;
+		background-size: cover;
+
+		.title{
+			display: none;
+			line-height: 1.1;
+			.text{
+				background: url("../img/set/pointer-min.png") no-repeat;
+				background-position: 0 2px;
+				margin: 0 0 0.5em 0.2em;
+				padding-left: 45px;
+				width: 100%;
+				font-size: (30/$html_fsize)+rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $width){
+	$width: 1190px;
+	$height: 672px;
+	#page_composition{
+		#set_left, #set_right{
+			height: $height;
+		}
+		#set_left{
+			left:0;
+		}
+		#set_center{
+			width: $width;
+			height: $height;
+		}
+		#set_right{
+			right:0;
+		}
+	}
+}
+
+@media screen and (max-width: 1199px){
+	$width: 710px;
+	$height: 404px;
+	#page_composition{
+		#set_left, #set_right{
+			height: $height;
+		}
+		#set_left{
+			left:0;
+		}
+		#set_center{
+			width: $width;
+			height: $height;
+			background: url("../img/set/set-lg.jpg") no-repeat center;
+			background-size: cover;
+		}
+		#set_right{
+			right:0;
+		}
+	}
+}
+
+
+@media screen and (max-width: 714px){
+	$width: 100%;
+	#page_composition{
+
+		.block_title{
+			display: block;
+		}
+
+		#set_left, #set_right{
+			display: none;
+		}
+
+		#set_center{
+			// position: static;
+			// padding: 0.2em 1em 1.5em 1em;
+			width: $width;
+			height: 57vw;
+			background: url("../img/set/set-sm.jpg") no-repeat center;
+			background-size: cover;
+			// background: url("../img/set/bg-sm.jpg");
+			// background-size: cover;
+
+			// .title{
+			// 	display: block;
+			// }
+		}
+	}
+}

@@ -1,0 +1,204 @@
+#page_cost_size{
+	#cost_blocks{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		.cost_block{
+			margin-bottom: 6em;
+			width: 330px;
+			text-align: center;
+			.img{
+				position: relative;
+				height: 460px;
+				img{
+					display: inline-block;
+					height: 100%;
+				}
+			}
+			.canvas{
+				position: relative;
+				float: left;
+				margin: -250px 0 0 55px;
+				z-index: 1;
+				p{
+					span:first-child{
+						font-size: (28/$html_fsize)+rem;
+					}
+					span:last-child{
+						font-size: (12/$html_fsize)+rem;
+					}
+				}
+				p.cost{
+					color: $purple;
+					span:first-child{
+						font-size: (36/$html_fsize)+rem;
+					}
+				}
+			}
+
+			.canvas_text{
+				margin-top: 1em;
+				padding: 0.5em;
+				border: 4px solid rgba(246, 71, 167, 0.5);
+				border-radius: 4px;
+				text-align: left;
+				p{margin: 0}
+			}
+		}
+		#cost_block_1{
+			.canvas{
+				margin: -290px 0 0 58px;
+				-moz-transform: rotate(-9.5deg);
+				-webkit-transform: rotate(-9.5deg);
+				-o-transform: rotate(-9.5deg);
+				-ms-transform: rotate(-9.5deg); /* для IE9 */
+				transform: rotate(-9.5deg); /* на будущее */
+			}
+		}
+		#cost_block_2{
+			.canvas{
+				margin: -285px 0 0 85px;
+				-moz-transform: rotate(0.9deg);
+				-webkit-transform: rotate(0.9deg);
+				-o-transform: rotate(0.9deg);
+				-ms-transform: rotate(0.9deg); /* для IE9 */
+				transform: rotate(0.9deg); /* на будущее */
+			}
+		}
+		#cost_block_3{
+			.canvas{
+				margin: -283px 0 0 90px;
+				-moz-transform: rotate(2deg);
+				-webkit-transform: rotate(2deg);
+				-o-transform: rotate(2deg);
+				-ms-transform: rotate(2deg); /* для IE9 */
+				transform: rotate(2deg); /* на будущее */
+			}
+		}
+		#cost_block_4{
+			.canvas{
+				margin: -262px 0 0 85px;
+				-moz-transform: rotate(-13deg);
+				-webkit-transform: rotate(-13deg);
+				-o-transform: rotate(-13deg);
+				-ms-transform: rotate(-13deg); /* для IE9 */
+				transform: rotate(-13deg); /* на будущее */
+			}
+		}
+
+		#cost_block_5{
+			.canvas{
+				margin: -290px 0 0 83px;
+				-moz-transform: rotate(-9deg);
+				-webkit-transform: rotate(-9deg);
+				-o-transform: rotate(-9deg);
+				-ms-transform: rotate(-9deg); /* для IE9 */
+				transform: rotate(-9deg); /* на будущее */
+			}
+		}
+		#cost_block_6{
+			.canvas{
+				margin: -270px 0 0 97px;
+				-moz-transform: rotate(-3deg);
+				-webkit-transform: rotate(-3deg);
+				-o-transform: rotate(-3deg);
+				-ms-transform: rotate(-3deg); /* для IE9 */
+				transform: rotate(-3deg); /* на будущее */
+			}
+		}
+		.page_btn{
+			margin-top: 0;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+
+@media screen and (max-width: 780px){
+	#page_cost_size{
+		#cost_blocks{
+			// display: flex;
+			// flex-wrap: wrap;
+			// justify-content: space-around;
+			.cost_block{
+				margin-bottom: 6em;
+				width: 330px;
+				text-align: center;
+				.img{
+					height: 360px;
+				}
+				.canvas{
+					p{
+						span:first-child{
+							font-size: (22/$html_fsize)+rem;
+						}
+						span:last-child{
+							font-size: (8/$html_fsize)+rem;
+						}
+					}
+					p.cost{
+						span:first-child{
+							font-size: (30/$html_fsize)+rem;
+						}
+					}
+				}
+			}
+			#cost_block_1{
+				.canvas{
+					p{
+						span:first-child{
+							font-size: (20/$html_fsize)+rem;
+						}
+						span:last-child{
+							font-size: (8/$html_fsize)+rem;
+						}
+					}
+					p.cost{
+						span:first-child{
+							font-size: (28/$html_fsize)+rem;
+						}
+					}
+					width: 100%;
+					margin: -230px 0 0 -15%;
+				}
+				@media screen and (max-width: 360px){
+					.canvas{
+						margin: -230px 0 0 -16%;
+					}
+				}
+				@media screen and (max-width: 330px){
+					.canvas{
+						margin: -230px 0 0 -18%;
+					}
+				}
+			}
+			#cost_block_2{
+				.canvas{
+					margin: -225px 0 0 31%;
+				}
+			}
+			#cost_block_3{
+				.canvas{
+					margin: -225px 0 0 31%;
+				}
+			}
+			#cost_block_4{
+				.canvas{
+					margin: -205px 0 0 30%;
+				}
+			}
+
+			#cost_block_5{
+				.canvas{
+					margin: -228px 0 0 28%;
+				}
+			}
+			#cost_block_6{
+				.canvas{
+					margin: -215px 0 0 31%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://cool-portret.ru/$1 [R,L]
+
+<IfModule dir_module>
+    DirectoryIndex index.php
+</IfModule>
+
+ErrorDocument 404 /err404.php
+ErrorDocument 403 /err404.php
+ErrorDocument 302 /err302.php

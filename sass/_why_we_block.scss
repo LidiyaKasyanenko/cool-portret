@@ -1,0 +1,134 @@
+#page_why_we{
+	background: url('../img/why-we/why-we-bg.jpg') no-repeat #7a4190;
+	// background-color: #7a4190;
+	background-position: 0 100%;
+	color: #fff;
+	// h2.block_title{}
+	#why_we_blocks{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		.why_we_block{
+			display: flex;
+			margin-bottom: 4em;
+			justify-content: space-around;
+			width: 50%;
+			// padding: 0 1em;
+			.why_we_icon{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-basis:10em;
+				height: 10em;
+				margin-top: 2em;
+				border-radius: 5em;
+				// margin-right: 1em;
+				background-color: $pink;
+				.sprite {
+					display: block;
+					background-image: url("../img/why-we/icons.png");
+					background-repeat: no-repeat;
+
+				}
+				.sprite-1 {
+					width: 58px;
+					height: 56px;
+					background-position: -5px -5px;
+				}
+
+				.sprite-2 {
+					width: 53px;
+					height: 63px;
+					background-position: -73px -5px;
+				}
+
+				.sprite-3 {
+					width: 67px;
+					height: 42px;
+					background-position: -5px -78px;
+				}
+
+				.sprite-4 {
+					width: 60px;
+					height: 61px;
+					background-position: -82px -78px;
+				}
+
+				.sprite-5 {
+					width: 65px;
+					height: 49px;
+					background-position: -136px -5px;
+				}
+			}
+
+			.why_we_description{
+				width: 65%;
+				h3{
+					font-size: (30/$html_fsize)+rem;
+				}
+				ul{padding: 0 0 0 1em}
+				p, ul, li{
+					font-family: $font-family-text;
+					font-size: (18/$html_fsize)+rem;
+				}
+			}
+		}
+
+		.why_we_block:last-child{
+			margin-top: -1.8em;
+		}
+	}
+}
+
+@media screen and (max-width: 1500px){
+	#page_why_we{
+		background: url('../img/why-we/why-we-bg-md.jpg') no-repeat #7a4190;
+		background-position: 0 100%;
+	}
+}
+
+@media screen and (max-width: 1199px){
+	#page_why_we{
+		#why_we_blocks{
+			.why_we_block:last-child{
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px){
+	#page_why_we{
+		background: #7a4190;
+		#why_we_blocks{
+			display: block;
+			.why_we_block{
+				width: 100%;
+				// padding: 0 1em;
+				.why_we_icon{
+				}
+				.why_we_description{
+					width: 65%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 546px){
+	#page_why_we{
+		#why_we_blocks{
+			.why_we_block{
+				.why_we_icon{
+					display: none;
+				}
+				.why_we_description{
+					// margin: 0 1em;
+					width: 100%;
+					h3{text-align: center}
+					// p{text-indent: 1em}
+				}
+			}
+		}
+	}
+}
